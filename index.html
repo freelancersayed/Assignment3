@@ -6,6 +6,7 @@
     <title>Assignment 3</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
 
     <!-- google font ----------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,17 +21,57 @@
   body{
     font-family: 'Manrope', sans-serif;
     /* background-color: white; */
+    
   }
 </style>
 
 </head>
-<body class="">
-    <header>
+<body class="bg-[linear] bg-gradient-to-r from-gray-800 to-gray-950">
+    <header class="container mx-auto px-5">
         <nav>
-
+          <div class="navbar py-10 ">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <a class="font-bold text-2xl">Hockey’s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Item 1</a></li>
+                <li>
+                  <details>
+                    <summary>Parent</summary>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+             <span class="hidden lg:flex"> <i class="fa-solid fa-magnifying-glass  mr-10"></i></span>
+              <a class="btn btn-error w-40 text-white  text-xl">Get Ticket</a>
+            </div>
+          </div>
         </nav>
         <!-- slider section ----------------->
-        <div class="container mx-auto">
+        <div class="container mx-auto relative">
           <div class="carousel w-full">
             <div id="slide1" class="carousel-item relative w-full">
               <img src="./Images/1.png" class="w-full" />
@@ -64,11 +105,12 @@
             </div>
           </div>
         </div>
+        
     </header>
     <main class="container mx-auto px-5 ">
      <div class=" border-y-2 border-dashed py-20 mt-24">
       <div class="contents justify-center text-center lg:px-52">
-        <h2 class="font-bold font text-3xl mb-10">Professional Hockeys Club</h2>
+        <h2 class="font-bold font text-4xl mb-10">Professional Hockeys Club</h2>
         <p class="max-w-3xl mx-auto">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin </p>
       </div>
      </div>
@@ -77,14 +119,8 @@
 
         <!-- circel 1 -------------------------------------------------------->
             <div class="card max-w-80 px-0  card-body text-center items-center ">
-              <svg class="" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
-                <path d="M120 60C120 93.1371 93.1371 120 60 120C26.8629 120 0 93.1371 0 60C0 26.8629 26.8629 0 60 0C93.1371 0 120 26.8629 120 60ZM11.469 60C11.469 86.8029 33.1971 108.531 60 108.531C86.8029 108.531 108.531 86.8029 108.531 60C108.531 33.1971 86.8029 11.469 60 11.469C33.1971 11.469 11.469 33.1971 11.469 60Z" fill="#E7E7E8"/>
-                <path d="M114.266 60C117.433 60 120.028 57.4265 119.726 54.2739C118.63 42.8387 114.268 31.914 107.102 22.8328C98.7478 12.2455 87.0702 4.78141 73.9534 1.64503C60.8366 -1.49135 47.0457 -0.117159 34.8058 5.54589C22.5658 11.2089 12.5907 20.8306 6.48991 32.8583C0.389129 44.8861 -1.48153 58.6185 1.17978 71.8398C3.84108 85.0612 10.8791 97.0004 21.1583 105.731C31.4376 114.462 44.3584 119.475 57.8362 119.961C69.3965 120.378 80.7882 117.444 90.6624 111.574C93.3847 109.955 93.9276 106.34 92.0567 103.785C90.1858 101.229 86.611 100.708 83.8529 102.265C76.0892 106.646 67.2324 108.824 58.2498 108.499C47.3483 108.106 36.8973 104.051 28.5829 96.9895C20.2686 89.9277 14.5759 80.2707 12.4233 69.5766C10.2707 58.8826 11.7837 47.7751 16.7184 38.0465C21.653 28.3178 29.7213 20.5354 39.6216 15.9548C49.5219 11.3742 60.6767 10.2627 71.2862 12.7996C81.8957 15.3364 91.3411 21.3737 98.0985 29.9373C103.666 36.9936 107.142 45.426 108.193 54.2786C108.566 57.4236 111.098 60 114.266 60Z" fill="#FF4240"/>
-              
-              </svg>
-              <h2 class="relative -top-20 absolute font-bold text-3xl">
-                87%
-              </h2>
+
+              <div class="radial-progress text-3xl text-red-500 "   style="--value:87; --size:8rem;" role="progressbar"><span class="text-white">87%</span></div>
               <h3 class="font-bold text-2xl">
                 Prayer Facility
               </h3>
@@ -97,14 +133,7 @@
         <!-- circel 2 -------------------------------------------------------->
 
         <div class="card max-w-80 px-0  card-body text-center items-center ">
-          <svg class="" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
-            <path d="M120 60C120 93.1371 93.1371 120 60 120C26.8629 120 0 93.1371 0 60C0 26.8629 26.8629 0 60 0C93.1371 0 120 26.8629 120 60ZM11.469 60C11.469 86.8029 33.1971 108.531 60 108.531C86.8029 108.531 108.531 86.8029 108.531 60C108.531 33.1971 86.8029 11.469 60 11.469C33.1971 11.469 11.469 33.1971 11.469 60Z" fill="#E7E7E8"/>
-            <path d="M114.266 60C117.433 60 120.028 57.4265 119.726 54.2739C118.63 42.8387 114.268 31.914 107.102 22.8328C98.7478 12.2455 87.0702 4.78141 73.9534 1.64503C60.8366 -1.49135 47.0457 -0.117159 34.8058 5.54589C22.5658 11.2089 12.5907 20.8306 6.48991 32.8583C0.389129 44.8861 -1.48153 58.6185 1.17978 71.8398C3.84108 85.0612 10.8791 97.0004 21.1583 105.731C31.4376 114.462 44.3584 119.475 57.8362 119.961C69.3965 120.378 80.7882 117.444 90.6624 111.574C93.3847 109.955 93.9276 106.34 92.0567 103.785C90.1858 101.229 86.611 100.708 83.8529 102.265C76.0892 106.646 67.2324 108.824 58.2498 108.499C47.3483 108.106 36.8973 104.051 28.5829 96.9895C20.2686 89.9277 14.5759 80.2707 12.4233 69.5766C10.2707 58.8826 11.7837 47.7751 16.7184 38.0465C21.653 28.3178 29.7213 20.5354 39.6216 15.9548C49.5219 11.3742 60.6767 10.2627 71.2862 12.7996C81.8957 15.3364 91.3411 21.3737 98.0985 29.9373C103.666 36.9936 107.142 45.426 108.193 54.2786C108.566 57.4236 111.098 60 114.266 60Z" fill="#49D293"/>
-          
-          </svg>
-          <h2 class="relative -top-20 absolute font-bold text-3xl">
-            95%
-          </h2>
+          <div class="radial-progress text-3xl text-green-500 "   style="--value:95; --size:8rem;" role="progressbar"><span class="text-white">95%</span></div>
           <h3 class="font-bold text-2xl">
             Prayer Facility
           </h3>
@@ -117,14 +146,7 @@
         <!-- circel 3 -------------------------------------------------------->
 
         <div class="card max-w-80 px-0  card-body text-center items-center ">
-          <svg class="" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
-            <path d="M120 60C120 93.1371 93.1371 120 60 120C26.8629 120 0 93.1371 0 60C0 26.8629 26.8629 0 60 0C93.1371 0 120 26.8629 120 60ZM11.469 60C11.469 86.8029 33.1971 108.531 60 108.531C86.8029 108.531 108.531 86.8029 108.531 60C108.531 33.1971 86.8029 11.469 60 11.469C33.1971 11.469 11.469 33.1971 11.469 60Z" fill="#E7E7E8"/>
-            <path d="M114.266 60C117.433 60 120.028 57.4265 119.726 54.2739C118.63 42.8387 114.268 31.914 107.102 22.8328C98.7478 12.2455 87.0702 4.78141 73.9534 1.64503C60.8366 -1.49135 47.0457 -0.117159 34.8058 5.54589C22.5658 11.2089 12.5907 20.8306 6.48991 32.8583C0.389129 44.8861 -1.48153 58.6185 1.17978 71.8398C3.84108 85.0612 10.8791 97.0004 21.1583 105.731C31.4376 114.462 44.3584 119.475 57.8362 119.961C69.3965 120.378 80.7882 117.444 90.6624 111.574C93.3847 109.955 93.9276 106.34 92.0567 103.785C90.1858 101.229 86.611 100.708 83.8529 102.265C76.0892 106.646 67.2324 108.824 58.2498 108.499C47.3483 108.106 36.8973 104.051 28.5829 96.9895C20.2686 89.9277 14.5759 80.2707 12.4233 69.5766C10.2707 58.8826 11.7837 47.7751 16.7184 38.0465C21.653 28.3178 29.7213 20.5354 39.6216 15.9548C49.5219 11.3742 60.6767 10.2627 71.2862 12.7996C81.8957 15.3364 91.3411 21.3737 98.0985 29.9373C103.666 36.9936 107.142 45.426 108.193 54.2786C108.566 57.4236 111.098 60 114.266 60Z" fill="#FFB546"/>
-          
-          </svg>
-          <h2 class="relative -top-20 absolute font-bold text-3xl">
-            90%
-          </h2>
+          <div class="radial-progress text-3xl text-orange-500 "   style="--value:90; --size:8rem;" role="progressbar"><span class="text-white">90%</span></div>
           <h3 class="font-bold text-2xl">
             Prayer Facility
           </h3>
@@ -137,14 +159,7 @@
         <!-- circel 4 -------------------------------------------------------->
 
         <div class="card max-w-80 px-0  card-body text-center items-center ">
-          <svg class="" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
-            <path d="M120 60C120 93.1371 93.1371 120 60 120C26.8629 120 0 93.1371 0 60C0 26.8629 26.8629 0 60 0C93.1371 0 120 26.8629 120 60ZM11.469 60C11.469 86.8029 33.1971 108.531 60 108.531C86.8029 108.531 108.531 86.8029 108.531 60C108.531 33.1971 86.8029 11.469 60 11.469C33.1971 11.469 11.469 33.1971 11.469 60Z" fill="#E7E7E8"/>
-            <path d="M114.266 60C117.433 60 120.028 57.4265 119.726 54.2739C118.63 42.8387 114.268 31.914 107.102 22.8328C98.7478 12.2455 87.0702 4.78141 73.9534 1.64503C60.8366 -1.49135 47.0457 -0.117159 34.8058 5.54589C22.5658 11.2089 12.5907 20.8306 6.48991 32.8583C0.389129 44.8861 -1.48153 58.6185 1.17978 71.8398C3.84108 85.0612 10.8791 97.0004 21.1583 105.731C31.4376 114.462 44.3584 119.475 57.8362 119.961C69.3965 120.378 80.7882 117.444 90.6624 111.574C93.3847 109.955 93.9276 106.34 92.0567 103.785C90.1858 101.229 86.611 100.708 83.8529 102.265C76.0892 106.646 67.2324 108.824 58.2498 108.499C47.3483 108.106 36.8973 104.051 28.5829 96.9895C20.2686 89.9277 14.5759 80.2707 12.4233 69.5766C10.2707 58.8826 11.7837 47.7751 16.7184 38.0465C21.653 28.3178 29.7213 20.5354 39.6216 15.9548C49.5219 11.3742 60.6767 10.2627 71.2862 12.7996C81.8957 15.3364 91.3411 21.3737 98.0985 29.9373C103.666 36.9936 107.142 45.426 108.193 54.2786C108.566 57.4236 111.098 60 114.266 60Z" fill="#4C8DF1"/>
-          
-          </svg>
-          <h2 class="relative -top-20 absolute font-bold text-3xl">
-            80%
-          </h2>
+          <div class="radial-progress text-3xl text-red-500 "   style="--value:80; --size:8rem;" role="progressbar"><span class="text-white">80%</span></div>
           <h3 class="font-bold text-2xl">
             Prayer Facility
           </h3>
@@ -160,7 +175,7 @@
       
       <div class=" border-y-2 border-dashed py-20 mt-24">
         <div class="contents justify-center text-center lg:px-52">
-          <h2 class="font-bold font text-3xl mb-10">Program Sections</h2>
+          <h2 class="font-bold font text-4xl mb-10">Program Sections</h2>
           <p class="max-w-3xl mx-auto">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin </p>
         </div>
        </div>
@@ -204,11 +219,11 @@
        <section class="container mb-20">
         <div class=" border-y-2 border-dashed py-20 mt-24 mb-20">
           <div class="contents justify-center text-center lg:px-52">
-            <h2 class="font-bold font text-3xl mb-10">Program Sections</h2>
+            <h2 class="font-bold font text-4xl mb-10">Our New Products</h2>
             <p class="max-w-3xl mx-auto">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin </p>
           </div>
          </div>
-          <div class="grid lg:grid-cols-2 justify-between gap-6">
+          <div class="grid lg:grid-cols-2 md:grid-cols-2 lg:justify-between gap-6  justify-center">
             <!-- card 1 -->
             <div class="">
               <div class="lg:flex border rounded-2xl lg:p-6">
@@ -308,9 +323,183 @@
           </div>
         </div>
        </section>
+       <!-- clients Question  ------------------------>
+
+       <section class="container">
+        <div class=" border-y-2 border-dashed py-20 mt-24 mb-20">
+          <div class="contents justify-center text-center lg:px-52">
+            <h2 class="font-bold font text-4xl mb-10">Clients Question</h2>
+            <p class="max-w-3xl mx-auto"> A client of mine dodged death twice. The first instance involved serendipitously avoiding what turned out to be an infamous plane crash caused by a terrorist bomb. </p>
+          </div>
+         </div>
+        <div class="lg:flex gap-10 border border-gray-700  p-10 rounded-3xl">
+          <div class="flex-1 mb-4">
+            <img class="" src="./Images/11.png" alt="">
+          </div>
+          <div class="space-y-5 flex-1">
+            <h2 class="font-bold text-3xl">Our Equipmnet</h2>
+            <p>Can you give me any suggestions for improving the amount, timing, or format of our communications to you and your organization</p>
+
+            <div class="collapse collapse-plus border-t-2 border-gray-700 rounded-none">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title text-2xl font-bold">
+                Hockey Training
+              </div>
+              <div class="collapse-content"> 
+                <p>As a hockey enthusiast, I am dedicated to excellence in training, fostering teamwork, and inspiring passion for the sport.</p>
+              </div>
+            </div>
+
+            <div class="collapse collapse-plus border-t-2 border-gray-700 rounded-none ">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title text-2xl font-bold">
+                Private Lessons
+              </div>
+              <div class="collapse-content"> 
+                <p>Offering personalized private lessons tailored to your needs. Elevate your skills with one-on-one coaching, focused training sessions, and expert guidance. Unlock your full potential with customized instruction for optimal improvement..</p>
+              </div>
+              </div>
+
+              <div class="collapse collapse-plus border-t-2 border-gray-700 rounded-none ">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title text-2xl font-bold">
+                Ski Touring
+              </div>
+              <div class="collapse-content"> 
+                <p>
+                  Embark on exhilarating ski touring adventures. Traverse breathtaking landscapes, enjoy the serenity of untouched snow, and experience the thrill of uphill climbs and exhilarating descents. Unleash your winter exploration..</p>
+              </div>
+             </div>
+
+             <div class="collapse collapse-plus border-t-2 border-gray-700 rounded-none">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title text-2xl font-bold">
+                Booking
+              </div>
+              <div class="collapse-content"> 
+                <p>
+                  Discover transparent pricing tailored to your needs. Our competitive rates ensure value for your investment. Choose from flexible plans, designed to accommodate diverse requirements. Experience affordability without compromising quality.</p>
+              </div>
+             </div>
+          </div>
+         </div>
+       </section>
+       
+       <!-- Get in Touch ----------------------->
+      <section class="mb-20">
+
+        <div class=" border-y-2 border-dashed py-20 mt-24 mb-20">
+          <div class="contents justify-center text-center lg:px-52">
+            <h2 class="font-bold font text-4xl mb-10">Get In Touch</h2>
+            <p class="max-w-3xl mx-auto">  Click any contact button to contact us or give feedback. And let us know your valuable opinion.</p>
+          </div>
+        </div>
+  
+        <div class=" lg:flex gap-6">
+            <!-- contact ------------------------------------->
+          <div class="border rounded-2xl mb-4 p-6 ">
+            <div class="bg-slate-800 border rounded-xl p-10 mb-6">
+              <img class="mb-8" src="./Images/Group 1171275317.png" alt="">
+              <p>Phone Number</p>
+              <h2 class="font-bold text-xl">(+880) 1908-945145</h2>
+            </div>
+            <div class="bg-slate-800 border rounded-xl p-10 mb-6 ">
+              <img class="mb-8" src="./Images/Group 1171275318.png" alt="">
+              <p>Email</p>
+              <h2 class="font-bold text-xl">freelancersayed45@gmail.com</h2>
+            </div>
+            <div class="bg-slate-800 border rounded-xl p-10 ">
+              <img class="mb-8" src="./Images/Group 1171275321.png" alt="">
+              <p>Location</p>
+              <h2 class="font-bold text-xl">Satkhira Shyamngar</h2>
+            </div>
+          </div>
+           
+           <!-- inpute --------------------------------------->
+           <div class="grid  lg:grid-cols-2 space-y-6 flex-1 gap-6 mb-6">
+              <div>
+                <label for="">
+                  <h2 class="label-text font-bold text-xl">Your Name</h2>
+                  <input type="text" placeholder="Enter your name" class="input input-bordered w-full " />
+                </label>
+              </div>
+    
+              <div class="pt-0 ">
+                  <h2 class="label-text -mt-6 font-bold text-xl">Your Email</h2>
+                  <input type="text" placeholder="Enter your email" class="input input-bordered w-full " />
+              </div>
+    
+               <div>
+                <h2 class="label-text font-bold text-xl">Subject</h2>
+                <input type="text" placeholder="Enyer your Subject" class="input input-bordered w-full " />
+               </div>
+               <div>
+                <h2 class="label-text font-bold text-xl">Phone Number </h2>
+                <input type="text" placeholder="Enter your phone" class="input input-bordered w-full" />
+                </div>
+                <div class="w-full lg:col-span-2 space-y-6">
+                  <h2 class="label-text font-bold text-xl">Message</h2>
+                  <textarea  placeholder="write your message..." class="textarea textarea-bordered textarea-lg w-full h-[300px]" ></textarea>
+                  <button class="btn btn-error w-full text-white text-xl">Send Message</button>
+                 </div>
+         </div>
+
+         <!-- textbox --------------------------->
+
+         </div>
+      </section>
+       
+      <footer class="footer footer-center p-10   text-base-content rounded bg-[linear] bg-gradient-to-r from-gray-850 to-gray-900">
+        <nav class="grid grid-flow-col gap-4">
+         <h2 class="font-bold text-2xl">Social Media</h2>
+        </nav> 
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+            <i class="fa-brands fa-instagram text-2xl"></i>
+
+          </div>
+        </nav> 
+        <aside>
+        </aside>
+      </footer>
     </main>
     <footer>
-
+      <footer class="footer p-10 bg-base-200 text-base-content ">
+        <aside>
+          <h1 class="text-2xl font-bold">Get In Touch</h1>
+          <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+          
+          <p class=""><i class="fa-solid fa-envelope pr-4 text-red-600"></i> freelancersayed45@gmail.com</p>
+          <p> <i class="fa-solid fa-phone pr-4 text-red-600"></i> 01908-945145</p>
+        </aside> 
+      
+        <nav class="">
+          <header class="footer-title">Services</header> 
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+     
+        <nav>
+        <div>
+          <header class="footer-title">Company</header> 
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </div>
+        </nav> 
+        <nav>
+          <header class="footer-title">Legal</header> 
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+      </footer>
     </footer>
 
 </body>
