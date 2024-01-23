@@ -11,18 +11,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<!-- font Awesome -->
+<script src="https://kit.fontawesome.com/b053853a67.js" crossorigin="anonymous"></script>
 
 
 <style>
   body{
     font-family: 'Manrope', sans-serif;
-    background-color: white;
+    /* background-color: white; */
   }
 </style>
 
 </head>
-<body>
+<body class="bg-white">
     <header>
         <nav>
 
@@ -71,7 +73,7 @@
       </div>
      </div>
 
-      <div class="container  pl-8 justify-between gap-10 lg:flex mx-auto mt-10">
+      <div class="container  pl-8 justify-center lg:justify-between gap-10 lg:flex grid md:grid-cols-2 mx-auto mt-10">
 
         <!-- circel 1 -------------------------------------------------------->
             <div class="card max-w-80 px-0  card-body text-center items-center ">
@@ -166,10 +168,10 @@
          <!-- Program Sections image container ----------------------------------->
 
        <div class="mb-32 grid lg:grid-cols-2 mt-20 gap-6 ">
-        <div class=" w-full  relative  bg-[url('./images/2.png')] bg-cover bg-center" > 
+        <div class=" w-full rounded-3xl relative  bg-[url('./images/2.png')] bg-cover bg-center" > 
           <!-- <img class="w-full " src="./Images/2.png" alt="">  -->
 
-       <div class=" space-y-10 pb-[77px] pt-40 px-5 lg:px-10 bg-[#0000007d]">
+       <div class=" space-y-10 rounded-3xl pb-[77px] pt-40 px-5 lg:px-10 bg-[#0000007d]">
         <h3 class="font-bold text-3xl text-white">Junior Program</h3>
         <p class="text-white">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
           enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
@@ -177,9 +179,9 @@
        </div>
       </div>
 
-      <div class="relative bg-no-repeat bg-[url('./images/3.png')] bg-cover bg-center">
+      <div class="relative rounded-3xl bg-no-repeat bg-[url('./images/3.png')] bg-cover bg-center">
          <!-- <img class="w-full" src="./Images/3.png" alt="">  -->
-       <div class="space-y-10 pb-[77px] pt-40 px-5 lg:px-10 bg-[#0000007d]">
+       <div class="space-y-10 rounded-3xl pb-[77px] pt-40 px-5 lg:px-10 bg-[#0000007d]">
         <h3 class="font-bold text-3xl text-white">Junior Program</h3>
         <p class="text-white">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
           enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
@@ -187,9 +189,9 @@
        </div>
       </div>
 
-      <div class="mb-6 lg:col-span-2 w-full h-[440px] bg-[url('./images/4.png')] bg-cover bg-no-repeat bg-center  bg-auto bg-">
-         <!-- <img class="w-full" src="./Images/4.png" alt="">  -->
-      <div class="space-y-10 h-[440px]  pb-20 pt-40 px-5 lg:px-10  bg-[#0000007d]">
+      <div class="mb-6 rounded-3xl lg:col-span-2 w-full h-[440px] bg-[url('./images/4.png')] bg-cover bg-no-repeat bg-center  bg-auto bg-">
+         <!-- <img class="w-full items-center justify-center relative hidde" src="./Images/4.png" alt="">  -->
+      <div class="space-y-10 rounded-3xl h-[440px]  pb-20 pt-40 px-5 lg:px-10  bg-[#0000007d]">
         <h3 class="font-bold text-3xl text-white">Junior Program</h3>
         <p class="max-w-[520px] text-white">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit 
           enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue sed et in.</p>
@@ -199,12 +201,28 @@
        </div>
 
        <!-- Our New Products --------------------------------------------->
-       <section>
+       <section class="container mb-20">
         <div class=" border-y-2 border-dashed py-20 mt-24">
           <div class="contents justify-center text-center lg:px-52">
             <h2 class="font-bold font text-3xl mb-10">Program Sections</h2>
             <p class="max-w-3xl mx-auto">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin.Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin </p>
           </div>
+         </div>
+         <div class="mt-20 mb-20">
+         <div class="flex">
+          <div>
+            <img src="./Images/5.png" alt="">
+          </div>
+          <div class="px-5">
+            <i class="fa-solid fa-star"><span class="ml-5">5.0</span></i>
+            <i class="fa-regular fa-eye ml-5"><span class="ml-5">20</span></i>
+            <i class="fa-regular fa-heart px-4"> <span class="ml-5">200</span></i>
+            <h2>World Cup Flags Football</h2>
+            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+            <p>Price - $22.00 <span class="ml-5"><i class="fa-solid fa-cart-shopping"></i></span></p>
+           
+          </div>
+         </div>
          </div>
        </section>
     </main>
